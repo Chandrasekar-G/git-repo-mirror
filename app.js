@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 console.log("Cron scheduler..");
 
-cron.schedule('0 2 * * *', function () {
+cron.schedule('0 2 * * * *', function () {
   console.log('running a task every minute');
   shell.exec("./script.sh");
 });
